@@ -43,7 +43,7 @@ public class Login2Naukari extends InvokeBrowser {
 
 		UpProfile.clickOnUpdateProfile();
 
-		String resumepath = "E:\\RESUME\\Harshad R. CV.pdf";
+		String resumepath = "C:\\Users\\admin\\Desktop\\sc\\Harshad-CV.pdf";
 
 		// this upload resume to profile
 		uploadRusm.updateResume(wait, resumepath);
