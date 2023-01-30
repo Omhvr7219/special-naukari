@@ -3,6 +3,7 @@ package TestLogin;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -42,13 +43,13 @@ public class Login2Naukari extends InvokeBrowser {
 		LoginHome.LoginNaukari(UtilityData.getExceldata(0, 0), UtilityData.getExceldata(0, 1));
 
 		UpProfile.clickOnUpdateProfile();
-
+   
 		String resumepath = "C:\\Users\\admin\\Desktop\\sc\\Harshad-CV.pdf";
 
 		// this upload resume to profile
 		uploadRusm.updateResume(wait, resumepath);
-
-		UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
+	     driver.findElement(By.xpath("//div[@class='crossIcon chatBot chatBot-ic-cross']")).click();
+	     UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
 
 		UpProfile2.clickonResumeHeadEditButton(wait, UtilityData.getExceldata(0, 2));
 
