@@ -48,7 +48,8 @@ public class Login2Naukari extends InvokeBrowser {
 
 		// this upload resume to profile
 		uploadRusm.updateResume(wait, resumepath);
-//	     driver.findElement(By.xpath("//div[@class='crossIcon chatBot chatBot-ic-cross']")).click();
+		Thread.sleep(2000);
+	     driver.findElement(By.xpath("//div[@class='crossIcon chatBot chatBot-ic-cross']")).click();
 	     UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
 
 		UpProfile2.clickonResumeHeadEditButton(wait, UtilityData.getExceldata(0, 2));
